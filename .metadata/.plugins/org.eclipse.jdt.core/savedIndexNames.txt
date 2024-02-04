@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\abder\OneDrive\Bureau\chat\.metadata\.plugins\org.eclipse.jdt.core
+3992838081.index
+3940758562.index
+1865797976.index
+2132342881.index

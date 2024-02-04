@@ -1,0 +1,10 @@
+package chat;
+public class ClientHundler implements Runnable{
+	public static ArrayList<ClientHundler> clienthundler =new ArrayList<>();
+	@Override
+	public void run() {
+		
+		
+	}
+	
+}

@@ -1,0 +1,53 @@
+package chat;
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import javax.Swing.*;
+public class Window {
+	private JTextField textField ;
+	private JTextArea text ;
+	public Window(JTextField textfield,JTextArea textarea) {
+		this.textField=textfield;
+		this.text=textarea;
+	}
+	public void view() {
+	JFrame frame = new JFrame("my first GUI");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setSize(400,400);
+	JButton button =new JButton("send");
+	JPanel panel=new JPanel();
+	
+	text.setSize(5,30);
+	JLabel label= new JLabel("Enter message");
+	panel.add(label);	
+	panel.add(textField);
+	panel.add(button);
+	String message="";
+	textField.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			if(!textField.equals("")) {
+				updatetextarea();
+			}
+		}
+	});
+	button.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			if(!textField.equals("")) {
+				updatetextarea();
+			}}}
+		);
+	text.setText(message);
+	frame.add(BorderLayout.SOUTH,panel);
+	frame.add(BorderLayout.CENTER,text);
+	frame.setVisible(true);}
+	private void updatetextarea() {
+		text.setText(text.getText()+textField.getText()+"\n");
+		textField.setText("");
+	}
+	public static void main(String[]args) {
+		JTextArea ta =new JTextArea();
+		JTextField tf = new JTextField(15);
+		chat chattest=new chat(tf,ta);
+		chattest.view();
+		
+}}

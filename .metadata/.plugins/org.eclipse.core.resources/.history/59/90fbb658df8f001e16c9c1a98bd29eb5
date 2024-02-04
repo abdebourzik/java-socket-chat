@@ -1,0 +1,21 @@
+package chat;
+import java.net.ServerSocket;
+import java.net.Socket;
+public class Server{
+	private ServerSocket serversocket;
+	public Server(ServerSocket sc){
+		this.serversocket = sc;
+	}
+	public void startserver(){
+		try{
+			while (!serversocket.isClosed()){
+				serversocket.accept();
+			}
+		}
+	}
+
+	
+	}
+	
+	
+	

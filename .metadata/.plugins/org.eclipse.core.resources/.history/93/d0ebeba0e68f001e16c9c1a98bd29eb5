@@ -1,0 +1,26 @@
+package chat;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class ClientHundler implements Runnable{
+	public static ArrayList<ClientHundler> clienthundler =new ArrayList<>();
+	private Socket socket;
+	private BufferedReader bufferedreader;
+	private BufferedWriter bufferedwriter;
+	private String clientusername;
+	public ClientHundler(Socket socket) { 
+		try{
+			this.socket=socket;
+			this.bufferedWriter = new BufferedWriter( OutputStreamWriter(socket.getOutputStream()));
+		}
+		
+	}
+	@Override
+	public void run() {
+		
+		
+	}
+	
+}
